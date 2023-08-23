@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+        <title>Reggie's Takeaway</title>
+        <link rel="icon" href="./../images/favico.ico">
+        <script src="./../js/base.js"></script>
+        <link rel="stylesheet" href="../../backend/plugins/element-ui/index.css" />
+        <link rel="stylesheet" href="../styles/index.css" />
+        <link rel="stylesheet" href="./../styles/no-wify.css" />
+    </head>
+    <body>
+        <div id="no_wifi" class="app">
+            <div class="divHead">
+                <div class="divTitle">
+                    <i class="el-icon-arrow-left" @click="goBack"></i>Reggie's Takeaway
+                </div>
+            </div>
+            <div class="divContent">
+                <img src="./../images//no_wifi.png"/>
+                <div class="divDesc">Network Error</div>
+                <div class="btnRefresh" @click="toPagePrev">Refresh</div>
+            </div>
+        </div>
+            <script src="../../backend/plugins/vue/vue.js"></script>
+            <script src="../../backend/plugins/element-ui/index.js"></script>
+            <script src="../../backend/plugins/axios/axios.min.js"></script>
+            <script src="./../js/request.js"></script>
+            <script>
+            new Vue({
+                el:"#no_wifi",
+                data(){
+                    return {
+                    }
+                },
+                computed:{},
+                created(){
+
+                },
+                mounted(){},
+                methods:{
+                    goBack(){
+                        history.go(-1)
+                    },
+                    toPagePrev(){
+                        history.go(-1)
+                    }
+                }
+            })
+            </script>
+    </body>
+</html>
